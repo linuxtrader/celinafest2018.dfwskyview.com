@@ -1,0 +1,26 @@
+#!/bin/bash
+
+base=celinafest2018
+subdomain=${base}.dfwskyview.com
+html=~/Documents/aws/subdomains/$base
+media=~/Movies/clients/$base/media
+
+
+cd $html
+
+# Cant use --delete here since there are multiple source locations
+# --exclude fails, so just move git, and remove project.mobirise
+mv .git ../${base}_git
+echo Syncing Standard content to $subdomain
+sleep 3
+aws s3 sync ${html}  s3://${subdomain}
+aws s3 rm s3://${subdomain}/project.mobirise
+mv ../${base}_git .git
+
+
+echo SKIP Syncing media,zips to $subdomain
+#aws s3 sync ${media} s3://${subdomain}/media/
+
+
+echo Maybe do zip -r ../${base}45.zip .
+echo Maybe run ./invalidate after review on netlify.

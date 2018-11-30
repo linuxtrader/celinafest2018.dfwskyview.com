@@ -1,0 +1,13 @@
+#! /bin/bash
+
+DIST=EWJCU9K84LF26
+
+# Seperate
+#aws cloudfront create-invalidation --distribution-id ${DIST} --paths "/media/*"
+#aws cloudfront create-invalidation --distribution-id ${DIST} --paths "/media/CelinaFest*"
+
+# Do Together
+#aws cloudfront create-invalidation --distribution-id ${DIST} --paths /index.html /videomobile.html /publish-hashes.json 
+#aws cloudfront create-invalidation --distribution-id ${DIST} --paths "/assets/*"
+ aws cloudfront create-invalidation --distribution-id ${DIST} --paths /index3.html "/assets/dan/*"
+
