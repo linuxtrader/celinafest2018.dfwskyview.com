@@ -4,7 +4,7 @@
         if (!$.isMobile()) { 
 
 	    // Arrow navagation from landing to next section, slideshow.
-	    var myInfoId = $(".content5").first().attr("id");
+	    var myInfoId = $(".mbr-wowslider-container").first().attr("id");
 	    var myArrow  = $('<div class="mbr-arrow hidden-sm-down" aria-hidden="true">' +
 	                     '<a href="#'+myInfoId+'"> <i class="mbri-down mbr-iconfont"></i> </a>' +
 	                     '</div>');
