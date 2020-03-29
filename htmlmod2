@@ -3,7 +3,7 @@
 
 grep -q scriptnew.js index.html && echo Nothing to do && exit 0
 
-cp /Users/danrose/Documents/aws/clients/scriptnew.js   assets/theme/js/
+cp scriptnew.js   assets/theme/js/
 
 # Backup the mobirise version
 echo >> index.html

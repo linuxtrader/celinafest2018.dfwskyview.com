@@ -14,4 +14,4 @@ git push
 
 echo
 echo
-echo after some time, confirm at http://${here}.dfwskyview.com
+echo after some time, confirm at https://${here}.dfwskyview.com
