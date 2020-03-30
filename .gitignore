@@ -1,6 +1,1 @@
-project.mobirise
-git.setup
-history/
-media/
-syncme
-.DS_Store
+../ctools/.gitignore
